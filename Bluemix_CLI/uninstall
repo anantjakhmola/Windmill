@@ -1,0 +1,46 @@
+#!/bin/sh
+
+# Uninstall CLI from your Linux system
+
+DIR=$(dirname "$0")
+
+if [ "$(id -u)" != "0" ]; then
+	echo "Superuser privileges are required to run this script."
+	sudo "$0" "$@"
+	exit $?
+fi
+
+OS=$(uname -s | tr '[:upper:]' '[:lower:]')
+if [ "$OS" != "linux" ]; then
+	echo "Unsupported OS $OS"
+	exit 1
+fi
+
+MARCH=$(uname -m | tr '[:upper:]' '[:lower:]')
+case "$MARCH" in
+	"ppc64le" ) ;;
+	"x86_64" ) ;;
+	"x86_32" ) ;;
+	*)
+		echo "Unsupported Architecture $MARCH"
+		exit 1
+		;;
+esac
+
+echo "Uninstalling IBM Cloud CLI..."
+
+EXIT_STATUS=0
+
+rm -Rf /usr/local/ibmcloud || EXIT_STATUS=$?
+
+rm -f /usr/local/bin/ibmcloud || EXIT_STATUS=$?
+rm -f /usr/local/bin/bluemix || EXIT_STATUS=$?
+rm -f /usr/local/bin/bx || EXIT_STATUS=$?
+rm -f /usr/local/bin/ibmcloud-analytics || EXIT_STATUS=$?
+
+if [ $EXIT_STATUS -eq 0 ]; then
+    echo "Uninstallation is finished successfully"
+else
+    echo "Error happened during installation. Check the messages above for details."
+fi
+echo "If you've enabled autocompeletion manually, don't forget to clean up the corresponding settings."

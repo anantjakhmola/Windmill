@@ -1,0 +1,37 @@
+{
+  "AccessToken": "bearer eyJhbGciOiJIUzI1NiIsImprdSI6Imh0dHBzOi8vdWFhLmV1LWdiLmNmLmNsb3VkLmlibS5jb20vdG9rZW5fa2V5cyIsImtpZCI6ImtleS0xIiwidHlwIjoiSldUIn0.eyJqdGkiOiJhYzdhNDhlM2JkYzk0ZTY3OTM4N2RmZDUxOTc5YTQyYyIsInN1YiI6IjMzOTQ3ODg1LTg2MmYtNDI5NS1hMzFkLWFmM2EwYzRmYjBlOCIsInNjb3BlIjpbImNsb3VkX2NvbnRyb2xsZXIucmVhZCIsInBhc3N3b3JkLndyaXRlIiwiY2xvdWRfY29udHJvbGxlci53cml0ZSIsIm9wZW5pZCIsIm5ldHdvcmsuYWRtaW4iLCJuZXR3b3JrLndyaXRlIiwidWFhLnVzZXIiXSwiY2xpZW50X2lkIjoiY2YiLCJjaWQiOiJjZiIsImF6cCI6ImNmIiwiZ3JhbnRfdHlwZSI6InBhc3N3b3JkIiwidXNlcl9pZCI6IjMzOTQ3ODg1LTg2MmYtNDI5NS1hMzFkLWFmM2EwYzRmYjBlOCIsIm9yaWdpbiI6IklCTWlkIiwidXNlcl9uYW1lIjoic2kwNTIwMjAwMTE3OUBzbWFydGludGVybnouY29tIiwiZW1haWwiOiJzaTA1MjAyMDAxMTc5QHNtYXJ0aW50ZXJuei5jb20iLCJhdXRoX3RpbWUiOjE1OTQ2NjU5OTEsImlhdCI6MTU5NDczODQzOSwiZXhwIjoxNTk0NzQyMDM5LCJpc3MiOiJodHRwczovL3VhYS5uZy5ibHVlbWl4Lm5ldC9vYXV0aC90b2tlbiIsInppZCI6InVhYSIsImF1ZCI6WyJjbG91ZF9jb250cm9sbGVyIiwicGFzc3dvcmQiLCJjZiIsInVhYSIsIm9wZW5pZCIsIm5ldHdvcmsiXX0.ekNtvDOYzB4EhlQYB8cwW1Do2m6N0z2BHKJmAXq06-Q",
+  "APIVersion": "2.148.0",
+  "AsyncTimeout": 0,
+  "AuthorizationEndpoint": "https://iam.cloud.ibm.com/cloudfoundry/login/uk-south",
+  "ColorEnabled": "",
+  "ConfigVersion": 3,
+  "DopplerEndPoint": "wss://doppler.eu-gb.cf.cloud.ibm.com:443",
+  "Locale": "",
+  "MinCLIVersion": "",
+  "MinRecommendedCLIVersion": "",
+  "OrganizationFields": {
+    "GUID": "22621c3b-ecb5-4146-8990-fcae454fb214",
+    "Name": "si05202001179@smartinternz.com"
+  },
+  "PluginRepos": [
+    {
+      "Name": "CF-Community",
+      "URL": "https://plugins.cloudfoundry.org"
+    }
+  ],
+  "RefreshToken": "eyJhbGciOiJIUzI1NiIsImprdSI6Imh0dHBzOi8vdWFhLmV1LWdiLmNmLmNsb3VkLmlibS5jb20vdG9rZW5fa2V5cyIsImtpZCI6ImtleS0xIiwidHlwIjoiSldUIn0.eyJqdGkiOiIyMjA0YTdmY2IwZTY0NDFmOWYzNjZkZDNmYWQ1NzVlMi1yIiwic3ViIjoiMzM5NDc4ODUtODYyZi00Mjk1LWEzMWQtYWYzYTBjNGZiMGU4IiwiaWF0IjoxNTk0NjY1OTkxLCJleHAiOjE1OTUyNzA3OTEsImNpZCI6ImNmIiwiY2xpZW50X2lkIjoiY2YiLCJpc3MiOiJodHRwczovL3VhYS5uZy5ibHVlbWl4Lm5ldC9vYXV0aC90b2tlbiIsInppZCI6InVhYSIsImF1ZCI6WyJjbG91ZF9jb250cm9sbGVyIiwicGFzc3dvcmQiLCJjZiIsInVhYSIsIm9wZW5pZCIsIm5ldHdvcmsiXSwiZ3JhbnRlZF9zY29wZXMiOlsib3BlbmlkIiwibmV0d29yay53cml0ZSIsInVhYS51c2VyIiwiY2xvdWRfY29udHJvbGxlci5yZWFkIiwicGFzc3dvcmQud3JpdGUiLCJjbG91ZF9jb250cm9sbGVyLndyaXRlIiwibmV0d29yay5hZG1pbiJdLCJhdXRoX3RpbWUiOjE1OTQ2NjU5OTEsImdyYW50X3R5cGUiOiJwYXNzd29yZCIsInVzZXJfbmFtZSI6InNpMDUyMDIwMDExNzlAc21hcnRpbnRlcm56LmNvbSIsIm9yaWdpbiI6IklCTWlkIiwidXNlcl9pZCI6IjMzOTQ3ODg1LTg2MmYtNDI5NS1hMzFkLWFmM2EwYzRmYjBlOCIsInJldl9zaWciOiJiMTM1YWE4OSJ9.AjOLkY7judG3QtHTpTwlJz7lpUgpQbSeXa2_xn23D5M",
+  "RoutingAPIEndpoint": "",
+  "SpaceFields": {
+    "GUID": "75082f8a-da5a-47da-a30c-4d2b4838f608",
+    "Name": "dev",
+    "AllowSSH": true
+  },
+  "SSHOAuthClient": "ssh-proxy",
+  "SSLDisabled": false,
+  "Target": "https://api.eu-gb.cf.cloud.ibm.com",
+  "Trace": "",
+  "UaaEndpoint": "https://uaa.eu-gb.cf.cloud.ibm.com",
+  "UAAGrantType": "",
+  "UAAOAuthClient": "cf",
+  "UAAOAuthClientSecret": ""
+}

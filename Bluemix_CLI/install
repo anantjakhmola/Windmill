@@ -1,0 +1,126 @@
+#!/bin/sh -e
+
+# Installer to install CLI into your Linux system
+
+DIR=$(dirname "$0")
+
+if [ "$(id -u)" != "0" ]; then
+	echo "Superuser privileges are required to run this script."
+	sudo "$0" "$@"
+	exit $?
+fi
+
+OS=$(uname -s | tr '[:upper:]' '[:lower:]')
+if [ "$OS" != "linux" ]; then
+	echo "Unsupported OS $OS"
+	exit 1
+fi
+
+MARCH=$(uname -m | tr '[:upper:]' '[:lower:]')
+case "$MARCH" in
+"ppc64le") ;;
+"x86_64") ;;
+"x86_32") ;;
+"s390x") ;;
+*)
+	echo "Unsupported Architecture $MARCH"
+	exit 1
+	;;
+esac
+
+print_usage() {
+	echo "Usage:"
+	echo "  install [-q, --quiet]"
+	echo ""
+	echo "Options:"
+	echo "-q, --quiet: Enable silent install"
+}
+
+quiet=false
+for i in "$@"; do
+	case "$i" in
+	"-q" | "--quiet")
+		quiet=true
+		;;
+	*)
+		echo "Unknown option: $i"
+		print_usage
+		exit 1
+		;;
+	esac
+done
+
+if [ "$quiet" = false ]; then
+	echo "Copying files ..."
+fi
+
+mkdir -p /usr/local/ibmcloud/bin
+mkdir -p /usr/local/ibmcloud/autocomplete
+
+cp -f "${DIR}/uninstall" /usr/local/ibmcloud/
+cp -f ${DIR}/bin/* /usr/local/ibmcloud/bin/
+cp -f ${DIR}/autocomplete/* /usr/local/ibmcloud/autocomplete/
+
+# /usr/local/ibmcloud/bx/ is deprecated, overwrite only if it exists
+if [ -d "/usr/local/ibmcloud/bx/" ]; then
+	cp -f ${DIR}/autocomplete/* /usr/local/ibmcloud/bx/
+fi
+
+# refresh soft links
+rm -f /usr/local/ibmcloud/bin/bluemix || true
+rm -f /usr/local/ibmcloud/bin/bx || true
+rm -f /usr/local/bin/bluemix || true
+rm -f /usr/local/bin/bx || true
+rm -f /usr/local/bin/ibmcloud || true
+rm -f /usr/local/bin/ibmcloud-analytics || true
+
+ln -sf /usr/local/ibmcloud/bin/ibmcloud /usr/local/ibmcloud/bin/bluemix
+ln -sf /usr/local/ibmcloud/bin/ibmcloud /usr/local/ibmcloud/bin/bx
+ln -sf /usr/local/ibmcloud/bin/ibmcloud /usr/local/bin/bluemix
+ln -sf /usr/local/ibmcloud/bin/ibmcloud /usr/local/bin/bx
+ln -sf /usr/local/ibmcloud/bin/ibmcloud /usr/local/bin/ibmcloud
+ln -sf /usr/local/ibmcloud/bin/ibmcloud-analytics /usr/local/bin/ibmcloud-analytics
+
+chown -R root:root /usr/local/ibmcloud
+chmod -R 755 /usr/local/ibmcloud
+
+clear_autocomplete() {
+	file_path=$1
+	autocomplete_file="$2"
+
+	if [ -f "$file_path" ]; then
+		sed -i '/### Added by IBM Cloud CLI/d' "$file_path"
+		sed -i '/### Added by the Bluemix CLI/d' "$file_path"
+		sed -i "/source \/usr\/local\/Bluemix\/bx\/$autocomplete_file/d" "$file_path"
+	fi
+}
+
+# clean old auto-completion for bash
+# login shell
+clear_autocomplete "/etc/profile" "bash_autocomplete" || true
+# non-login shell
+clear_autocomplete "/etc/bash.bashrc" "bash_autocomplete" || true
+
+if [ -d "/etc/bash_completion.d" ]; then
+	rm -f /etc/bash_completion.d/bluemix_cli_autocomplete || true
+fi
+
+# clean old auto-completion for zsh
+clear_autocomplete "/etc/zsh/zshrc" "zsh_autocomplete" || true
+
+# remove previous CLI
+rm -Rf /usr/local/Bluemix || true
+
+# remove not-used soft link
+rm -f /usr/local/bin/bluemix-analytics || true
+
+if [ "$quiet" = false ]; then
+	echo "The installation completed successfully."
+	echo "To get started, open a terminal window and enter \"ibmcloud help\". Refer to \"http://ibm.biz/cli-auto-completion\" if you want to enable auto-completion for zsh or bash."
+	echo ""
+	echo "IBM Cloud CLI has a plug-in framework to extend its capability. To install the recommended plug-ins and dependencies, run the install script from \"http://ibm.biz/install-idt\". For additional plug-in details, see \"http://ibm.biz/install-cli-plugin\"."
+	echo ""
+	echo "Starting from version 1.0.0, the IBM Cloud CLI no longer bundles the Cloud Foundry CLI by default. To run Cloud Foundry commands via the IBM Cloud CLI, install the Cloud Foundry CLI by using the 'ibmcloud cf install' command."
+	echo ""
+	echo "To uninstall, run \"/usr/local/ibmcloud/uninstall\""
+fi

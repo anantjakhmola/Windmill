@@ -1,0 +1,46 @@
+{
+  "APIEndpoint": "https://cloud.ibm.com",
+  "ConsoleEndpoint": "https://cloud.ibm.com",
+  "CloudType": "public",
+  "CloudName": "bluemix",
+  "Region": "",
+  "RegionID": "",
+  "IAMEndpoint": "https://iam.cloud.ibm.com",
+  "IAMToken": "Bearer eyJraWQiOiIyMDIwMDYyNDE4MzAiLCJhbGciOiJSUzI1NiJ9.eyJpYW1faWQiOiJJQk1pZC01NTAwMDdRRFNCIiwiaWQiOiJJQk1pZC01NTAwMDdRRFNCIiwicmVhbG1pZCI6IklCTWlkIiwiaWRlbnRpZmllciI6IjU1MDAwN1FEU0IiLCJnaXZlbl9uYW1lIjoiQWRoeWFuc2giLCJmYW1pbHlfbmFtZSI6IkJoYXJkd2FqIiwibmFtZSI6IkFkaHlhbnNoIEJoYXJkd2FqIiwiZW1haWwiOiJzaTA1MjAyMDAxMTc5QHNtYXJ0aW50ZXJuei5jb20iLCJzdWIiOiJzaTA1MjAyMDAxMTc5QHNtYXJ0aW50ZXJuei5jb20iLCJhY2NvdW50Ijp7InZhbGlkIjp0cnVlLCJic3MiOiJjNDk0NDQ5NmJhNzY0NmM5OTUwOThmMDg1NzdmYjhjNiJ9LCJpYXQiOjE1OTQ2NjQ3NjQsImV4cCI6MTU5NDY2ODM2NCwiaXNzIjoiaHR0cHM6Ly9pYW0uY2xvdWQuaWJtLmNvbS9pZGVudGl0eSIsImdyYW50X3R5cGUiOiJ1cm46aWJtOnBhcmFtczpvYXV0aDpncmFudC10eXBlOnBhc3Njb2RlIiwic2NvcGUiOiJpYm0gb3BlbmlkIiwiY2xpZW50X2lkIjoiYngiLCJhY3IiOjEsImFtciI6WyJwd2QiXX0.1u39x4AdafwjxoO1fy78XJM9O24grTeN_Gslj4PD7ytsYz78NZnWIttR4cSq_1ciInWJaY_qRKbXMjDlqE2QTrbqIGnl9OLDvezPZNnIyliMQppwI3oOVp2ANxJTvwW_izgdRE0pmYKwV8WV7ZFABrmdeD1rTiGw5m0NhmhXuvSOCyPCbT7jOJD7AheesQEdivbk3iLAGPuPFNBdrhKI0X729J4psKL22zChzq81skwUkjBMg6hM-MM6Aykg_yTYwQwA7olvmZN9TxSY02UCvO68XtZRXFO6FIYn2k2sTu1YMstI9Yk3pTP_fNpytRv3syaPN5rFU0RaqeHXn4Eiug",
+  "IAMRefreshToken": "OKDmXdjwBJDpNeUlzw-IVjqlwYZZ1PAhfM4gL6ffTVGR7Uyxp3U16G_WNzRidvgne1KnFmR-k5zZLYqUDHwo_MdS-tQMvypjebB3t13_hSZzrvhG3L-yxIxe3TBW-ctvQHCtz7FEbaMDlh0yZ1A2Or0GENHl4gBWqIjmBJ2h-eR5_l9XZ3sUccq84qHmO8_KWUhOMUxH3S1Se5Dldx8cmxB1WPAGVLyRzziGGs3xvLZQDUyPVFDMGReUVqwlV6tnhwYiRGTjAUEQ6GqognXR6uzaNtmm3RC8WRwdTUZO4-vfnlIeLaW7dKVZmIHtfQKgbjxedaYXoGIl7IFhcYG2rFxOxf--_T1HC-BxOMsJKeOGimByueP8cL5DyMVA-qxo0tqzXLPLGhA6_4c4N7IrgJaPf-xi1cMH_lmIpgCb82OMl2NLU0BNysNaQsu6Q-UTrMvQyCT7vwl1t8dQxWzjzCyumAPqknRJp9Og7bquAS69r49zN0iGzubTZoZC816GSO_-H0Sv9G1fpmguANmaCCRNnwSk2tEAG4T4QsVpwzXNP9-eb99MfcXf2KhFsdXXLlDKQ7TEyq6U6mcp1Tt9IK83T3DD0eUWRzG9Jb2VAbg5FuaZwcFMW9tuzU-8t7NZrYgYlPUqlRPaCrAR_IUFYrVqmAdpZSZ157_xomJMfVbCMqN8bc_4DdUy9m8qH5r8xRlyWpZ8UWPXqd5baFTVOWHmMdlovvavG9TuPq-2XlNzK1jduFu5vyNVboYPLDnaiec3jkuDXOTf5KYfcF_H8TqvjyeBoEiE7RAQXIWTDMOZNKkNi5sCRvVQUS9Uznij3Hxno9LvP8U9SFaLMXqfYCMpMvcTUpv0-BchpVwvC8wxKudNLXb0uZdkrpJA78MMGFHDj8MRjEiUyHthf52XGZSe3WvOvbslAa8hngUnWfwYBypPhtlfOIy0NhQaYeRx6KgcYAy-ntBFUrGD3Maf_ArLb5FOUt6r8vwi9bUQt894rarIih7NsXK2y1ZENwjpWXt6MirCiVQRvEgX1lGQKCVseUuPtqoGuXA7dli9-GCnOw",
+  "Account": {
+    "GUID": "c4944496ba7646c995098f08577fb8c6",
+    "Name": "Adhyansh Bhardwaj's Account",
+    "Owner": "si05202001179@smartinternz.com"
+  },
+  "ResourceGroup": {
+    "GUID": "7995e1235d9840deb85ea851d7d1e6be",
+    "Name": "Default",
+    "State": "ACTIVE",
+    "Default": true,
+    "QuotaID": "e1bcfd09-a2ac-483a-8796-6ce5df94d25f"
+  },
+  "LoginAt": "2020-07-13T23:56:01+05:30",
+  "CFEETargeted": false,
+  "CFEEEnvID": "",
+  "PluginRepos": [
+    {
+      "Name": "IBM Cloud",
+      "URL": "https://plugins.cloud.ibm.com"
+    }
+  ],
+  "SSLDisabled": false,
+  "Locale": "",
+  "Trace": "",
+  "ColorEnabled": "",
+  "HTTPTimeout": 0,
+  "CLIInfoEndpoint": "",
+  "CheckCLIVersionDisabled": false,
+  "UsageStatsDisabled": false,
+  "UsageStatsEnabled": false,
+  "UsageStatsEnabledLastUpdate": "2020-07-13T23:54:14.630005529+05:30",
+  "SDKVersion": "0.3.0",
+  "UpdateCheckInterval": 0,
+  "UpdateRetryCheckInterval": 0,
+  "UpdateNotificationInterval": 0
+}
