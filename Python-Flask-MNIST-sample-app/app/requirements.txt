@@ -1,4 +1,4 @@
 Flask==1.0.2
 watson-machine-learning-client==1.0.346
 Pillow==5.3.0
-werkzeug==0.14.1
+werkzeug==0.15.3
